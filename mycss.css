@@ -1,0 +1,297 @@
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16pxpx;
+    /* same as above */
+    font: normal 16px Arial, Helvetica, sans-serif;
+
+    background-color: wheat;
+    color: #000000;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.container{
+    margin:auto;
+    width: 80%;
+    /* WIDTH IN PX
+    we can use in px but it will not shrink or
+    expand when we change the browser size
+    so use % 
+    width: 960px;
+    */
+}
+
+.box-1{
+    background-color: #9900ff;
+
+    /* ------ BORDERS ------ */
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+    /* same as above 
+    border : top right botton left
+    border: 10px 5px 10px 5px
+
+    ->or if top and bottom is same and 
+        left and right are same
+        border: (top&bottom)px (left&right)px;
+
+    */
+    border : 5px solid red;
+    
+    /* change border width*/
+    border-width: 5px;
+
+    /* change bottom border size*/
+    border-bottom-width: 10px;
+
+    /* change border style*/
+    border-top-style: dotted;
+
+    /* ------ PADDINGS ------ */
+    padding-right: 20px;
+
+    /* ------ MARGINS ------ */
+    margin-top: 10px;
+        /* margin:(top&bottom)px (right&left)px*/
+    margin: 10px 5px;
+}
+
+.box-1 h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    word-spacing: 0.5em;
+    letter-spacing: 0.2em;
+    text-shadow : red;
+} 
+
+.box-2{
+    border:1px solid black;
+    padding: 10px;
+}
+
+.categories{
+    padding: 10px;;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.categories h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.categories ul{
+    padding: 10px;
+
+    /* removing circle bullets of ul
+        you can remove it by using 
+        list-style: none;
+    */
+    list-style: none;
+
+}
+
+.categories li{
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom:3px solid black;
+    border-bottom-style: dotted;
+}
+
+.categories li:before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-image: url("images\\check.png");
+    background-size: cover;
+    background-position: center;
+    left :0;
+    top : 10%;
+    transform: translate(-100%);
+}
+
+.categories a{
+    /* removing underlines of hyper links*/
+    text-decoration: none;
+    /* changing blue color to red color*/
+    color: black;
+
+    border-bottom: solid red;
+}
+
+/* ------ :ACTIVE ------
+The :active selector is used to select and style the active link.
+A link becomes active when you click on it.
+Tip: The :active selector can be used on all elements, not only links.*/
+.categories a:active{
+    color : green;
+    /* it will make border for the time when
+        you click on that
+    */
+    border: 1px solid black;
+}
+
+/* ------ :VISITED (visited links)------ */
+.categories a:visited{
+    color:rgb(0, 4, 255);
+    background-color: aquamarine;
+}
+
+/* ------ :LINK (unvisited links)------ */
+.categories a:link{
+    color : brown;
+    background-color: purple;
+}
+
+
+/* ------ :HOVER ------*/
+.categories a:hover{
+    color: red;
+}
+
+
+.my-form{
+    padding: 20px;
+}
+
+.my-form .form-group{
+    padding-bottom :15px;
+}
+
+
+.my-form label{
+    /* display : block is used to set label in seprate line or block*/
+    display: block;
+}
+
+.my-form input[type="text"],[type="password"], textarea{
+    padding: 5px;
+    width: 80%;
+}
+
+.button{
+    display: block;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+.button:hover{
+    color: white;
+    background-color: red;
+}
+
+
+
+.block{
+    padding: 5px;
+    display: block;
+    float: left;
+    width: 33.33%;
+    border: 3px solid rgb(212, 17, 66);
+    /* box sizing will calculate width and border and use it to resize
+        box sizing
+    */
+    box-sizing: border-box;
+}
+
+#main-block{
+    float: left;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#side-bar{
+    float: left;
+    width: 30%;
+    padding: 15px;
+    background-color:#000000;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#side-bar:hover{
+    background-color: red;
+}
+
+
+/* ------ BG IMAGE ------ */
+.p-box{
+    position: relative;
+    width:400px;
+    height:300px;
+    background-image: url("images\\myimage.jpg");
+    /* this will take image center top part
+    bg-pos : horizontal vertical
+    background-position: center top;
+    */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.p-box h1 {
+    position: absolute;
+    top: 50px;
+}
+
+/* this button will always on 30px from the viewpoint 
+    disregard of your scroll or not
+*/
+.mybutton{
+    position: fixed;
+    top:30px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: palevioletred;
+    height: 40px;
+    border: none;
+}
+
+/*----- PSUEDO CLASSES ------ */
+
+.mylist li{
+    /* removinf bullets */
+    list-style: none;
+
+    /* making them align in horizontla view */
+    display: inline;
+
+    padding-right: 20px;
+
+    margin-left: 20px;
+}
+
+/* it will chnage bg color of 1st li */
+.mylist li:first-child{
+    background-color: red;
+}
+
+/* it will chnage bg color of last li */
+.mylist li:last-child{
+    background-color: blue;
+}
+
+/* it will chnage bg color of nth li */
+.mylist li:nth-child(5){
+    background-color: greenyellow;
+}
+
+/* it will chnage bg color of nth  even or odd li */
+.mylist li:nth-child(even){
+    background-color: #00ffdd;
+}
+

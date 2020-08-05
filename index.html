@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paraId"></p>
+    <!-- Challange 1: Age in days-->
+    <div class="container-1">
+        <h1>Challange 1: Your age in days</h1>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-primary" onclick="ageInDays()">Click me</button>
+            </div>
+            <div>
+                <button  class="btn btn-danger" onclick="reset()"> reset </button>
+            </div>
+        </div>
+
+        <div class="flex-box-container-1">
+            <div id="flex-box-result"></div>
+        </div>
+    </div>
+
+    <!-- Challange 2: Genrate Random cats-->
+    <div class="container-2">
+        <h1>Challange 2: Genrate Random cats</h1>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-success" onclick="genCat()">Genrate cats</button>
+            </div>
+            <div>
+                <button class="btn btn-danger" onclick="delCat()">Romove cat</button>
+            </div>
+        </div>
+    <div class="flex-box-container-2" id="flex-cat-gen"></div>
+    </div>
+
+
+    <!-- Challange 3: Rock Paper Scissors-->
+    <div class="container-3">
+        <h1>Challange 3:Rock Paper Scissors</h1>
+        <div class="flex-box-rps" id="flex-box-rps-div">
+            <img id="rock" src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-016-512.png" alt="ROCK" height="150" width="150" onclick="rpsGame(this)">
+            <img id="paper" src="https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-019-512.png" alt="PAPER" height="150" width="150" onclick="rpsGame(this)">
+            <img id="scissor" src="https://www.netclipart.com/pp/m/63-639213_danahand-scissors-rock-paper-scissors-png.png" alt="SCISSOR" height="150" width="150" onclick="rpsGame(this)">
+        </div>
+        <div class='flex-box-container-1'>
+            <div>
+                <button class="btn btn-primary" onclick="replayRps()">replay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challange 4: Change Button Color-->
+    <div class="container-4">
+        <h1>Challange 4: Change Button Color</h1>
+        <div class="flex-box-container-4">
+            <form action="">
+                <select name="sbackdrop" id="background" onchange="btnChangeColor(this)">
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset" >Reset</option>
+                </select>
+            </form>
+
+            <button class="btn btn-danger">Yahoo</button>
+            <button class="btn btn-primary">Google</button>
+            <button class="btn btn-warning">Firefox</button>
+            <button class="btn btn-success">GO</button>
+        </div>
+    </div>
+
+    <!-- Challange 5: BlackJack Game-->
+    <div class="container-5">
+        <h1>Challange 5 :BlackJack</h1>
+        <div>
+            <h1><span id="blackjack-result">Let's Play</span></h1>
+        </div>
+        
+        <div class="flex-blackjack-row-1">
+            <div id="your-box">
+                <h1>You :<span id="your-blackjack-result">0</span></h1>
+            </div>
+
+            <div id="dealers-box">
+                <h1>Dealer :<span id="dealer-blackjack-result">0</span></h1>
+            </div>
+        </div>
+
+        <div class="flex-blackjack-row-2">
+            <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr2" id="blackjack-stand-button">Stand</button>
+                <button class="btn-lg btn-danger" id="blackjack-deal-button">Deal</button>
+            </div>
+        </div>
+
+        <div class="flex-blackjack-row-3">
+            <table >
+                <tr>
+                    <td><h3>Win</h3></td>
+                    <td><h3>Losses</h3></td>
+                    <td><h3>Draws</h3></td>
+                </tr>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
